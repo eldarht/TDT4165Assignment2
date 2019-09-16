@@ -19,14 +19,14 @@ a) Formally describe the regular grammar of the lexemes in task 2.
                |  <number> <topCmd> <statement>
                |  <stackCmd> <statement>
 
-<operator>  ::=	  '+'
+<operator>  ::=   '+'
                |  '-'
                |  '*'
                |  '/'
 
 <stackCmd>  ::=   'p'
 
-<topCmd>  	::=   'i'
+<topCmd>    ::=   'i'
                |  '^'
                |  'd'
 
@@ -36,7 +36,7 @@ a) Formally describe the regular grammar of the lexemes in task 2.
 
 <negativeNr>::=   '~'<number>
 
-<positiveNr>::=	^[1-9][0-9]*$
+<positiveNr>::=   ^[1-9][0-9]*$
 
 ```
 b) Describe the grammar of the infix notation in task 3 using (E)BNF. Beware of operator precedence. Is the grammar ambiguous? Explain why it is or is not ambiguous?
@@ -57,7 +57,7 @@ b) Describe the grammar of the infix notation in task 3 using (E)BNF. Beware of 
 <operatorH>  ::=  '*'
                |  '/'
 
-<topCmd>  	::=   'i'
+<topCmd>     ::=  'i'
                |  '^'
 
 <number>    ::=   '0'
@@ -66,7 +66,7 @@ b) Describe the grammar of the infix notation in task 3 using (E)BNF. Beware of 
 
 <negativeNr>::=   '~'<number>
 
-<positiveNr>::=	^[1-9][0-9]*$
+<positiveNr>::=   ^[1-9][0-9]*$
 
 
 The grammar should not be ambigouse as each statement is either a number or encapsulated in
