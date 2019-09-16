@@ -6,5 +6,5 @@ Task completion:
 
 - task 1) a-f Are answered by [List.oz](List.oz)
 - task 2) a-g Are answered by [Tokenizer.oz](Tokenizer.oz)
-- task 3) Not yet implemented
+- task 3) a-b Are answered by [Infix.oz](Infix.oz)
 - task 4) Not yet implemented

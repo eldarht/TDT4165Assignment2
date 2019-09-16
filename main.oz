@@ -4,6 +4,7 @@ import
 define
   \insert List.oz 
   \insert Tokenizer.oz
+  \insert Infix.oz
 
 
   {System.showInfo "Length:   "#{Length [0 1 2 3]}}
@@ -21,4 +22,5 @@ define
   {System.show {Interpret {Tokenize {Lex "1 2 3 + d"}}}}
   {System.show {Interpret {Tokenize {Lex "1 1 2 3 + i"}}}}
   {System.show {Interpret {Tokenize {Lex "1 2 3 + ^"}}}}
+  {System.showInfo {Infix {Tokenize {Lex "3.0 10.0 9.0 * - 0.3 +"}}}.1}
 end
