@@ -5,6 +5,6 @@ Lexer, tokenizer, interpreter and Parser written in [oz](http://mozart.github.io
 Task completion:
 
 - task 1) a-f Are answered by [List.oz](List.oz)
-- task 2) Not yet implemented
+- task 2) a-g Are answered by [Tokenizer.oz](Tokenizer.oz)
 - task 3) Not yet implemented
 - task 4) Not yet implemented
