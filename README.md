@@ -51,13 +51,13 @@ b) Describe the grammar of the infix notation in task 3 using (E)BNF. Beware of 
 
 <statementL>::=   <statement> <operatorL> <statement>
 
-<operatorL>  ::=  '+'
+<operatorL> ::=   '+'
                |  '-'
 
-<operatorH>  ::=  '*'
+<operatorH> ::=   '*'
                |  '/'
 
-<topCmd>     ::=  'i'
+<topCmd>    ::=   'i'
                |  '^'
 
 <number>    ::=   '0'
