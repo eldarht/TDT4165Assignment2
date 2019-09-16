@@ -19,11 +19,11 @@ define
   {System.showInfo "\nTask 2:"}
   {System.showInfo "Lex       (2.a): "#{ListToVirtualString {Lex "1 2 + 3 *"}}}
   {System.printInfo"Tokenize  (2.b): "}{System.show {Tokenize {Lex "1 2 + 3 *"}}}
-  {System.printInfo"Interpret (2.c): "}{System.show {Interpret {Tokenize {Lex "1 2 3 +"}}}}
-  {System.printInfo"Interpret (2.d): "}{System.show {Interpret {Tokenize {Lex "1 2 3 p +"}}}}
-  {System.printInfo"Interpret (2.e): "}{System.show {Interpret {Tokenize {Lex "1 2 3 p + d"}}}}
-  {System.printInfo"Interpret (2.f): "}{System.show {Interpret {Tokenize {Lex "3 i"}}}}
-  {System.printInfo"Interpret (2.g): "}{System.show {Interpret {Tokenize {Lex "3 ^"}}}}
+  {System.printInfo"Interpret (2.c): "}{System.show {List.reverse{Interpret {Tokenize {Lex "1 2 3 +"}}}}}
+  {System.printInfo"Interpret (2.d): "}{System.show {List.reverse{Interpret {Tokenize {Lex "1 2 3 p +"}}}}}
+  {System.printInfo"Interpret (2.e): "}{System.show {List.reverse{Interpret {Tokenize {Lex "1 2 3 p + d"}}}}}
+  {System.printInfo"Interpret (2.f): "}{System.show {List.reverse{Interpret {Tokenize {Lex "3 i"}}}}}
+  {System.printInfo"Interpret (2.g): "}{System.show {List.reverse{Interpret {Tokenize {Lex "3 ^"}}}}}
   {System.showInfo "----------------------------- \n"}
 
   {System.showInfo "\nTask 3:"}
