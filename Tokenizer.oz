@@ -70,7 +70,7 @@ fun {Interpret Tokens}
     case Tokens of nil then
       Stack
     [] number(Number)|Rest then
-      {Iterate Number|Stack Rest}
+      {Iterate number(Number)|Stack Rest}
     [] operator(type:Operator)|Rest then
       A|B|NewStack = Stack in
       {Iterate {Operate Operator A B}|NewStack Rest}
@@ -92,13 +92,13 @@ end
  */
 fun {Operate Operator A B}
   if Operator == plus then
-    A + B
+    number(A.1 + B.1)
   elseif Operator == minus then
-    B - A
+    number(B.1 - A.1)
   elseif Operator == multiply then
-    A * B
+    number(A.1 * B.1)
   elseif Operator == divide then
-    B / A
+    number(B.1 / A.1)
   end
 end
 
@@ -115,16 +115,16 @@ fun {Do Command Stack}
     Stack
 
   elseif Command == {String.toAtom "d"} then % Task 2.e solution.
-    Stack.1|Stack
+    number(Stack.1.1)|Stack
 
   elseif Command == {String.toAtom "i"} then % Task 2.f solution.
-    case Stack of H|T then
-      ~H|T
+    case Stack of number(H)|T then
+      number(~H)|T
     end
 
   elseif Command == {String.toAtom "^"} then % Task 2.g solution.
-    case Stack of H|T then
-      1.0/H|T
+    case Stack of number(H)|T then
+      number(1.0/H)|T
     end
   end
 end
