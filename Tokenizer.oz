@@ -18,12 +18,12 @@ end
  */
 fun {Tokenize Lexemes}
   Operators = ["+" "-" "*" "/"]         % Values lexeme might have to be an operator
-  Commands = ["p" "d" "i" "^"]              % Values lexeme might have to be a command
+  Commands = ["p" "d" "i" "^"]          % Values lexeme might have to be a command
 in
   {Map Lexemes % check all elements with anonymus function
     fun {$ Lexeme}
       if {Member Operators Lexeme}  then % Check if lexeme is an operator
-        operator(type: {String.toAtom Lexeme})
+        operator(type: {OperatorToAtom Lexeme})
       
       elseif {Member Commands Lexeme} then
         command({String.toAtom Lexeme})
@@ -36,6 +36,25 @@ in
       end
     end
   }
+end
+
+/**
+ * @brief      Converts a string operator into an textual atom
+ *
+ * @param      Operator  The operator
+ *
+ * @return     Atom corresponding to it name
+ */
+fun {OperatorToAtom Operator}
+  if Operator == "+" then
+    plus
+  elseif Operator == "-" then
+    minus
+  elseif Operator == "*" then
+    multiply
+  elseif Operator == "/" then
+    divide
+  end
 end
 
 /**
@@ -72,13 +91,13 @@ end
  * @return     The result of the operation
  */
 fun {Operate Operator A B}
-  if Operator == {String.toAtom "+"} then
+  if Operator == plus then
     A + B
-  elseif Operator == {String.toAtom "-"} then
+  elseif Operator == minus then
     B - A
-  elseif Operator == {String.toAtom "*"} then
+  elseif Operator == multiply then
     A * B
-  elseif Operator == {String.toAtom "/"} then
+  elseif Operator == divide then
     B / A
   end
 end

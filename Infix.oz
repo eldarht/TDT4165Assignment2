@@ -31,13 +31,13 @@ end
  * @return     Virtual string of infix notation
  */
 fun {Enclose Operator A B}
-  if Operator == {String.toAtom "+"} then
+  if Operator == plus then
     "("#B#"+"#A#")"
-  elseif Operator == {String.toAtom "-"} then
+  elseif Operator == minus then
     "("#B#"-"#A#")"
-  elseif Operator == {String.toAtom "*"} then
+  elseif Operator == multiply then
     "("#B#"*"#A#")"
-  elseif Operator == {String.toAtom "/"} then
+  elseif Operator == devide then
     "("#B#"/"#A#")"
   elseif Operator == {String.toAtom "i"} then
     "(~"#A#")"
